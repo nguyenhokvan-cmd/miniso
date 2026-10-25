@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINISO | Home</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <div class="container nav">
+        <a href="index.html">
+            <img class="logo" src="images/logo.svg" alt="MINISO">
+        </a>
+
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+        </nav>
+
+        <div class="actions">
+            <a href="cart.html">🛒 <span id="cartCount">0</span></a>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <!-- HERO BANNER -->
+    <section class="hero">
+        <img src="images/banner.svg" alt="MINISO banner">
+    </section>
+
+    <!-- SHOP BY CATEGORY -->
+    <section class="section">
+        <div class="container">
+            <div class="title">
+                <h2>Shop by Category</h2>
+                <p>Discover cute and useful products ♡</p>
+            </div>
+
+            <div class="categories">
+                <a class="category" href="products.html?cat=Toys">🧸 Toys</a>
+                <a class="category" href="products.html?cat=Bags">🎒 Bags</a>
+                <a class="category" href="products.html?cat=Home">🏠 Home</a>
+                <a class="category" href="products.html?cat=Beauty">💄 Beauty</a>
+                <a class="category" href="products.html?cat=Electronics">🎧 Electronics</a>
+                <a class="category" href="products.html?cat=Stationery">✏️ Stationery</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+    <section class="section">
+        <div class="container">
+            <div class="title">
+                <h2>Featured Products</h2>
+                <p>Popular picks from MINISO ♡</p>
+            </div>
+
+            <div class="products" id="featuredProducts"></div>
+        </div>
+    </section>
+
+    <!-- MINISO AI GIFT STUDIO -->
+    <section class="ai-studio" id="ai-gift-studio">
+
+        <div class="ai-glow glow-one"></div>
+        <div class="ai-glow glow-two"></div>
+
+        <div class="ai-studio-inner">
+
+            <!-- AI INTRODUCTION -->
+            <div class="ai-heading">
+                <span class="ai-label">✦ YOUR PERSONAL GIFT CONCIERGE ✦</span>
+
+                <h2>MINISO <span>AI Gift Studio</span></h2>
+
+                <p>Every little thing can become a lovely memory.</p>
+
+                <div class="ai-heading-line">
+                    ♡ ───────── ✧ ───────── ♡
+                </div>
+            </div>
+
+            <div class="ai-layout">
+
+                <!-- LEFT SIDE -->
+                <div class="ai-intro">
+
+                    <div class="ai-orb">✦</div>
+
+                    <p class="ai-mini-title">A LITTLE MAGIC FOR YOU</p>
+
+                    <h3>
+                        Let's find their
+                        <br>
+                        perfect little gift.
+                    </h3>
+
+                    <p class="ai-description">
+                        Tell us a little about your special person.
+                        We'll find lovely items that match their vibe
+                        and your budget.
+                    </p>
+
+                    <div class="ai-perks">
+                        <div><span>♡</span> Thoughtful gift ideas</div>
+                        <div><span>✧</span> Matched to your budget</div>
+                        <div><span>୨୧</span> Curated from our collection</div>
+                    </div>
+
+                    <div class="ai-note">
+                        <span>✦</span>
+                        A little gift, a lot of love.
+                    </div>
+
+                </div>
+
+                <!-- RIGHT SIDE: GIFT FORM -->
+                <div class="ai-form-card">
+
+                    <div class="ai-form-top">
+                        <div>
+                            <span class="ai-step">YOUR GIFT PROFILE</span>
+                            <h3>Tell us your vibe</h3>
+                        </div>
+
+                        <span class="ai-sparkle">✧</span>
+                    </div>
+
+                    <!-- RECIPIENT -->
+                    <label for="studio-person">
+                        01. Who is this gift for?
+                    </label>
+
+                    <select id="studio-person">
+                        <option value="friend">♡ My bestie / friend</option>
+                        <option value="family">୨୧ My family</option>
+                        <option value="self">✧ A little treat for myself</option>
+                        <option value="special">♡ Someone special</option>
+                    </select>
+
+                    <!-- STYLE -->
+                    <label>02. Choose their aesthetic</label>
+
+                    <div class="ai-style-options">
+
+                        <button type="button"
+                            class="ai-style active"
+                            data-style="cute">
+
+                            <span>🎀</span>
+                            <b>Coquette</b>
+                            <small>Sweet & cute</small>
+
+                        </button>
+
+                        <button type="button"
+                            class="ai-style"
+                            data-style="useful">
+
+                            <span>☁️</span>
+                            <b>Everyday</b>
+                            <small>Useful & neat</small>
+
+                        </button>
+
+                        <button type="button"
+                            class="ai-style"
+                            data-style="relax">
+
+                            <span>🧸</span>
+                            <b>Cozy</b>
+                            <small>Soft & comfy</small>
+
+                        </button>
+
+                    </div>
+
+                    <!-- OCCASION -->
+                    <label for="studio-occasion">
+                        03. What's the occasion?
+                    </label>
+
+                    <select id="studio-occasion">
+                        <option value="birthday">🎂 Birthday</option>
+                        <option value="thankyou">💌 Just to say thank you</option>
+                        <option value="surprise">🎁 A little surprise</option>
+                        <option value="selfcare">🫧 Self-care day</option>
+                    </select>
+
+                    <!-- BUDGET -->
+                    <div class="ai-budget-heading">
+                        <label for="studio-budget">04. Your budget</label>
+                        <span id="studio-budget-value">200.000đ</span>
+                    </div>
+
+                    <input
+                        type="range"
+                        id="studio-budget"
+                        min="50000"
+                        max="1000000"
+                        step="50000"
+                        value="200000"
+                    >
+
+                    <div class="ai-budget-labels">
+                        <span>50.000đ</span>
+                        <span>1.000.000đ</span>
+                    </div>
+
+                    <!-- GENERATE BUTTON -->
+                    <button
+                        type="button"
+                        class="ai-generate-btn"
+                        id="studio-generate">
+
+                        Find my perfect gifts <span>✦</span>
+
+                    </button>
+
+                    <p class="ai-privacy-note">
+                        ♡ Curated with love from our MINISO collection
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- AI RESULTS -->
+            <div
+                class="ai-results"
+                id="studio-results"
+                aria-live="polite">
+
+                <div class="ai-empty">
+                    <span>୨୧</span>
+
+                    <p>Your next favorite gift is waiting here.</p>
+
+                    <small>
+                        Choose your preferences above to begin.
+                    </small>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+
+<footer>
+    <div class="container footer-grid">
+
+        <div>
+            <h3>MINISO ♡</h3>
+            <p>Make Life Better.</p>
+            <p>A cute little corner for everyday happiness.</p>
+        </div>
+
+        <div>
+            <h3>Explore</h3>
+            <p><a href="products.html">Products</a></p>
+            <p><a href="about.html">About Us</a></p>
+        </div>
+
+        <div>
+            <h3>Support</h3>
+            <p><a href="contact.html">Contact</a></p>
+            <p><a href="login.html">Account</a></p>
+        </div>
+
+        <div>
+            <h3>Follow</h3>
+            <p>Facebook ♡</p>
+            <p>Instagram ♡</p>
+            <p>TikTok ♡</p>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 MINISO Store Project · Made with ♡
+    </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script src="js/main.js"></script>
+<script src="js/products-data.js"></script>
+<script src="js/home.js"></script>
+
+</body>
+</html>
+
+<div id="cartList"></div>
+<div id="cartTotal"></div>
